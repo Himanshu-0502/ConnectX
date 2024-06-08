@@ -43,3 +43,7 @@ python app.py
 ```
 
 4. Access the application in your web browser at local host.
+
+## Acknowledgments
+
+- Inspiration from various online tutorials and resources.
