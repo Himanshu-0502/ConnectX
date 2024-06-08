@@ -110,5 +110,5 @@ def reset():
     session['game_over'] = False
     return jsonify({'board': session['board'], 'turn': session['turn'], 'game_over': session['game_over']})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+    # app.run(debug=True)
