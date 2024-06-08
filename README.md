@@ -42,9 +42,4 @@ pip install -r requirements.txt
 python app.py
 ```
 
-4. Access the application in your web browser at `http://localhost:5000`.
-
-## Usage
-
-1. Open the game in your web browser.
-2. Follow the on-screen instructions to play against the AI agent.
+4. Access the application in your web browser at local host.
