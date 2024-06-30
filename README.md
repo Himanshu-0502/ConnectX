@@ -1,6 +1,6 @@
-# ConnectX
+# Connect Four
 
-This project is a web-based implementation of the ConnectX game. It allows users to play ConnectX against an AI agent.
+This project is a web-based implementation of the Connect Four Game. It allows players to play Connect Four against an AI agent.
 
 ## Demo
 
@@ -8,7 +8,7 @@ You can find the live demo of the game [here](https://connectx-p3bd.onrender.com
 
 ## Features
 
-- Play ConnectX against an AI agent.
+- Play Connect Four against an AI agent.
 - Interactive web interface.
 - Customizable game settings.
 
@@ -27,7 +27,7 @@ This project is built using the following technologies:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Himanshu-0502/ConnectX.git
+git clone https://github.com/Himanshu-0502/Connect-Four.git
 ```
 
 2. Install dependencies:
