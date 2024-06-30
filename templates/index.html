@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Game Title -->
+        <h1>Connect Four</h1>
+        
+        <!-- Game Board Container -->
+        <div id="game-board"></div>
+        
+        <!-- Controls Section -->
+        <div id="controls">
+            <!-- Status Display -->
+            <h2 id="status">Status</h2>
+            <!-- Reset Button -->
+            <button id="reset-button">Reset</button>
+        </div>
+    </div>
+    
+    <!-- Link to the external JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

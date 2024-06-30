@@ -1,0 +1,184 @@
+/* General body styling */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+}
+
+/* Styling for the main heading */
+h1 {
+    font-size: 2em;
+    color: #61dafb;
+    margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: color-change 2s infinite;
+}
+
+/* Container for the game elements */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the game board */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns */
+    grid-template-rows: repeat(6, 1fr); /* 6 rows */
+    grid-gap: 5px;
+    width: 90vw;
+    max-width: 450px;
+    aspect-ratio: 7 / 6; /* Maintain a 7:6 aspect ratio */
+    margin: 10px 0;
+    border: 2px solid #61dafb;
+    border-radius: 10px;
+    background-color: #20232a;
+    box-sizing: border-box;
+    transition: border-color 0.5s;
+}
+
+/* Styling for each cell in the game board */
+.cell {
+    width: 100%;
+    padding-bottom: 100%; /* Maintain square aspect ratio */
+    position: relative;
+    border-radius: 50%; /* Make cells circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, background-color 0.5s;
+}
+
+/* Hover effect for cells */
+.cell:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Empty cell styling */
+.empty {
+    background-color: #87CEEB;
+}
+
+/* Red player cell styling */
+.red {
+    background-color: #FF0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    animation: drop 0.5s ease-in-out;
+}
+
+/* Yellow player cell styling */
+.yellow {
+    background-color: #FFFF00;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
+    animation: drop 0.5s ease-in-out;
+}
+
+/* Container for the control elements */
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+/* Status display styling */
+#status {
+    font-size: 1em;
+    color: #61dafb;
+    animation: color-change 2s infinite;
+    padding: 8px 16px;
+    background-color: #20232a;
+    border: 2px solid #61dafb;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 200px; /* Fixed width */
+}
+
+/* Reset button styling */
+#reset-button {
+    padding: 8px 16px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 200px; /* Fixed width same as status */
+    margin-left: 10px; /* Spacing between status and reset button */
+}
+
+/* Hover effect for reset button */
+#reset-button:hover {
+    background-color: #45a049;
+}
+
+/* Animation for dropping effect */
+@keyframes drop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animation for color change effect */
+@keyframes color-change {
+    0% { color: #61dafb; }
+    50% { color: #282c34; }
+    100% { color: #61dafb; }
+}
+
+/* Responsive design for large screens */
+@media (max-width: 1200px) {
+    #game-board {
+        width: 90vw;
+        max-width: 450px;
+        aspect-ratio: 7 / 6; /* Maintain aspect ratio */
+    }
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 992px) {
+    #game-board {
+        width: 95vw;
+        max-width: 450px;
+        aspect-ratio: 7 / 6; /* Maintain aspect ratio */
+    }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #status, #reset-button {
+        font-size: 0.8em;
+        width: 150px; /* Adjust width for smaller screens */
+    }
+
+    #game-board {
+        width: 100vw;
+        aspect-ratio: 7 / 6; /* Maintain aspect ratio */
+    }
+}
